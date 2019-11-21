@@ -69,15 +69,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_start:
                 if (isMinutesValid()) {
-                    tracker = new LocationTracker(MainActivity.this,Long.valueOf(etMinutes.getText().toString().trim()) * 1000 * 60);
+                    tracker = new LocationTracker(MainActivity.this, Long.valueOf(etMinutes.getText().toString().trim()) * 1000 * 60);
                     btnStop.setEnabled(true);
                     btnStart.setEnabled(false);
+                    Toast.makeText(MainActivity.this, "Started Tracking!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.btn_stop:
                 btnStart.setEnabled(true);
                 btnStop.setEnabled(false);
                 tracker.stopUsingLocation();
+                Toast.makeText(MainActivity.this, "Stopped Tracking!", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

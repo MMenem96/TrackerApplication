@@ -88,7 +88,7 @@ public class LocationTracker extends Service implements LocationListener {
     public void stopUsingLocation() {
         if (locationManager != null) {
             locationManager.removeUpdates(LocationTracker.this);
-
+            this.onDestroy();
         }
     }
 
