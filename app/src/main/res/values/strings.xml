@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tracker Application</string>
+    <string name="text_tracker_app">Tracking App!</string>
+    <string name="text_interval">Enter tracking interval</string>
+    <string name="text_minutes">Minutes</string>
+    <string name="text_start">Start</string>
+    <string name="text_stop">Stop</string>
+</resources>
